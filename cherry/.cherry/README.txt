@@ -1,0 +1,1 @@
+﻿Put this file in the same folder of the binary file. :)
