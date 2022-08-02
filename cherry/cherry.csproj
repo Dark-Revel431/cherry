@@ -9,16 +9,13 @@
 
   <ItemGroup>
     <Content Include=".cherry\.out\history.txt" />
+    <Content Include=".cherry\.out\outputs\IGNOREME.txt" />
     <Content Include=".cherry\cherry.settings.json" />
     <Content Include=".cherry\README.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include=".cherry\.out\outputs\" />
   </ItemGroup>
 
 </Project>
