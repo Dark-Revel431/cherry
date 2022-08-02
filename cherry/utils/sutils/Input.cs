@@ -6,7 +6,7 @@ internal class Input
     {
         Console.Write($"┌ ");
         Console.ForegroundColor = ConsoleColor.DarkYellow;
-        Console.WriteLine($"[.{Data.CdSlash}{Directory.GetCurrentDirectory().Split(Data.CdSlash)[^1]}] ~ m:{Data.Mode}, p:{Data.Process}");
+        Console.WriteLine($"[.{Data.CdSlash}{Directory.GetCurrentDirectory().Split(Data.CdSlash)[^1]}] ~ {Data.Mode}, {Data.Process}, {Data.NoSave}");
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("│");
         Console.Write("└ > ");

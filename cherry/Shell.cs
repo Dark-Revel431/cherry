@@ -11,7 +11,7 @@ internal class Shell
             Input.PrintInput();
             string command = Input.GetInput().Trim();
 
-            if (Data.Mode != Modes.nosave) History.AddHistory(command);
+            if (!Data.NoSave) History.AddHistory(command);
 
             CheckCommand.Check(command);
             if (command != "clear")

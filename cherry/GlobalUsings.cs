@@ -6,5 +6,8 @@ global using cherry.utils;
 global using cherry.utils.history;
 global using cherry.utils.sutils;
 global using cherry.commands;
+global using System.Threading.Tasks;
+global using System.Diagnostics;
+global using System.Threading;
 
 namespace cherry;

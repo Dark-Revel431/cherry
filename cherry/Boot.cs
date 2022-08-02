@@ -8,10 +8,10 @@ internal class Boot
 
         Console.Title = "cherry";
 
-        if (Environment.OSVersion.ToString().Contains("Windows")) Data.Process = "cmd.exe";
+        if (Environment.OSVersion.ToString().Contains("Windows")) Data.Process = "cmd";
         else Data.Process = "bash";
 
-        if (Data.Process == "cmd.exe") Data.CdSlash = '\\';
+        if (Data.Process == "cmd") Data.CdSlash = '\\';
         else Data.CdSlash = '/';
 
         if (File.Exists($"{Data.ShellDirectory}{Data.CdSlash}.cherry{Data.CdSlash}cherry.settings.json"))
@@ -31,9 +31,6 @@ internal class Boot
                             break;
                         case "hide":
                             Data.Mode = Modes.hide;
-                            break;
-                        case "nosave":
-                            Data.Mode = Modes.nosave;
                             break;
                         case "onlystatus":
                             Data.Mode = Modes.onlystatus;
