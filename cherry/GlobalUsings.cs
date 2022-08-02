@@ -8,6 +8,6 @@ global using cherry.utils.sutils;
 global using cherry.commands;
 global using System.Threading.Tasks;
 global using System.Diagnostics;
-global using System.Threading;
+global using System.Net.Http;
 
 namespace cherry;

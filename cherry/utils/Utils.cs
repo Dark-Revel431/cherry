@@ -2,6 +2,29 @@
 
 internal class Utils
 {
+    internal static void PrintStart()
+    {
+        Console.WriteLine("Welcome on cherry.");
+        Console.WriteLine("Short Cuts:");
+        Console.WriteLine("     - (Alt + I) --> Show info");
+        Console.WriteLine("     - (Alt + P) --> Show current path");
+        Console.WriteLine("     - (Alt + C) --> Clear the shell");
+        Console.WriteLine("     - (Alt + M) --> Show current mode");
+        Console.WriteLine("     - (Alt + N) --> Show no-save value");
+        Console.WriteLine("     - (Alt + R) --> Show current process");
+        Console.Write('\n');
+        Console.WriteLine("Key-Words:");
+        Console.WriteLine("     - :i --> Show info");
+        Console.WriteLine("     - :p --> Show current path");
+        Console.WriteLine("     - :c --> Clear the shell");
+        Console.WriteLine("     - :m --> Show/Set current mode");
+        Console.WriteLine("     - :n --> Show/Set no-save value");
+        Console.WriteLine("     - :pr --> Show/Set current process");
+        Console.WriteLine("     - :s --> Start a process");
+        Console.WriteLine("\n" +
+            "GitHub: https://github.com/Dark-Revel431/cherry\n");
+    }
+
     internal static void PrintInfo()
     {
         Console.Write('\n');

@@ -6,7 +6,7 @@ internal class CheckCommand
     {
         try
         {
-            if (command.Split(" ")[0] == "cd")
+            if (command.Split()[0] == "cd" || command.Split()[0] == "chdir")
             {
                 DirectoryCommands.Cd(command);
             }
@@ -29,6 +29,10 @@ internal class CheckCommand
             else if (command.Split()[0] == "info" || command.Split()[0] == ":i")
             {
                 Utils.PrintInfo();
+            }
+            else if (command.Split()[0] == "update")
+            {
+                Update.Check();
             }
             else if (command.Split()[0] == "nosave" || command.Split()[0] == ":n")
             {

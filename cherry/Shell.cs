@@ -6,6 +6,11 @@ internal class Shell
 
     internal static void Start()
     {
+        Utils.PrintStart();
+        Update.Check();
+
+        Console.Write(Environment.NewLine);
+
         while (true)
         {
             Input.PrintInput();
