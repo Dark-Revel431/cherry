@@ -14,7 +14,7 @@ internal class CheckCommand
             {
                 DirectoryCommands.Path();
             }
-            else if (command.Split()[0] == "ls")
+            else if (command.Split()[0] == "ls" || command.Split()[0] == ":l")
             {
                 DirectoryCommands.Ls();
             }
@@ -22,7 +22,7 @@ internal class CheckCommand
             {
                 Console.Clear();
             }
-            else if (command.Split()[0] == "exit")
+            else if (command.Split()[0] == "exit" || command.Split()[0] == ":e")
             {
                 GeneralCommands.Exit();
             }
@@ -82,6 +82,10 @@ internal class CheckCommand
                     Console.WriteLine(Data.Mode);
                     Console.ForegroundColor = ConsoleColor.White;
                 }
+            }
+            else if (command.Split()[0] == "help")
+            {
+                Utils.PrintHelp();
             }
             else if (command.Split()[0] == "process" || command.Split()[0] == ":pr")
             {

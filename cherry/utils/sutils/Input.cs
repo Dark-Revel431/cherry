@@ -73,6 +73,14 @@ internal class Input
                 Console.Write(Environment.NewLine);
                 return ":pr";
             }
+            else if (key.Key == ConsoleKey.L && key.Modifiers == ConsoleModifiers.Alt)
+            {
+                return ":l";
+            }
+            else if (key.Key == ConsoleKey.E && key.Modifiers == ConsoleModifiers.Alt)
+            {
+                return ":e";
+            }
             else if (key.Key == ConsoleKey.Tab)
             {
                 List<string> FilesAndDirs = new();

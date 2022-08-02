@@ -6,7 +6,7 @@ internal class Update
     {
         try
         {
-            HttpClient client = new HttpClient();
+            HttpClient client = new();
             var process = client.GetStringAsync("https://raw.githubusercontent.com/Dark-Revel431/cherry/master/README.md");
             process.Wait();
 
@@ -15,9 +15,9 @@ internal class Update
             string[] lines = @string.Split('\n');
             foreach (string line in lines)
             {
-                if (line.Contains("Version: "))
+                if (line.Contains("Version:"))
                 {
-                    if (line.Replace("Version: ", "").Contains(Data.Version.ToString()))
+                    if (line.Replace("Version:", "").Contains(Data.Version))
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine("No updates found!");

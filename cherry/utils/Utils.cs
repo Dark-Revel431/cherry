@@ -2,6 +2,50 @@
 
 internal class Utils
 {
+    internal static void PrintHelp()
+    {
+        Console.WriteLine("cherry.");
+        Console.Write('\n');
+        Console.WriteLine("Short Cuts:");
+        Console.WriteLine("     - (Alt + I) --> Show info");
+        Console.WriteLine("     - (Alt + P) --> Show current path");
+        Console.WriteLine("     - (Alt + C) --> Clear the shell");
+        Console.WriteLine("     - (Alt + M) --> Show current mode");
+        Console.WriteLine("     - (Alt + N) --> Show no-save value");
+        Console.WriteLine("     - (Alt + R) --> Show current process");
+        Console.WriteLine("     - (Alt + L) --> Show current-dir files");
+        Console.WriteLine("     - (Alt + E) --> Exit");
+        Console.Write('\n');
+        Console.WriteLine("Key-Words:");
+        Console.WriteLine("     - :i --> Show info");
+        Console.WriteLine("     - :p --> Show current path");
+        Console.WriteLine("     - :c --> Clear the shell");
+        Console.WriteLine("     - :m --> Show/Set current mode");
+        Console.WriteLine("     - :n --> Show/Set no-save value");
+        Console.WriteLine("     - :pr --> Show/Set current process");
+        Console.WriteLine("     - :s --> Start a process");
+        Console.WriteLine("     - :l --> Show current-dir files");
+        Console.WriteLine("     - :e --> Exit");
+        Console.WriteLine("\n" +
+            "GitHub: https://github.com/Dark-Revel431/cherry\n");
+
+        Console.WriteLine("Custom commands:");
+        Console.WriteLine("     - info/:i --> Show info");
+        Console.WriteLine("     - ls/:l --> Show current-dir files");
+        Console.WriteLine("     - path/:p --> Show current path");
+        Console.WriteLine("     - clear/:c --> Clear the shell");
+        Console.WriteLine("     - mode/:m [mode] --> Show/Set current mode");
+        Console.WriteLine("     - nosave/:n [bool] --> Show/Set no-save value");
+        Console.WriteLine("     - process/:pr [process] --> Show/Set current process");
+        Console.WriteLine("     - start/:s [command] --> Exec a command");
+        Console.WriteLine("     - exit/:e --> Exit");
+        Console.WriteLine("     - update --> Check for updates");
+        Console.WriteLine("     - [process] [command] --> Exec a command with a specified terminal");
+        Console.WriteLine("          - ex. bash ls");
+
+        Console.WriteLine("\nAll non-defined command will be executed with the selected Process");
+    }
+
     internal static void PrintStart()
     {
         Console.WriteLine("Welcome on cherry.");
@@ -12,6 +56,8 @@ internal class Utils
         Console.WriteLine("     - (Alt + M) --> Show current mode");
         Console.WriteLine("     - (Alt + N) --> Show no-save value");
         Console.WriteLine("     - (Alt + R) --> Show current process");
+        Console.WriteLine("     - (Alt + L) --> Show current-dir files");
+        Console.WriteLine("     - (Alt + E) --> Exit");
         Console.Write('\n');
         Console.WriteLine("Key-Words:");
         Console.WriteLine("     - :i --> Show info");
@@ -21,6 +67,8 @@ internal class Utils
         Console.WriteLine("     - :n --> Show/Set no-save value");
         Console.WriteLine("     - :pr --> Show/Set current process");
         Console.WriteLine("     - :s --> Start a process");
+        Console.WriteLine("     - :l --> Show current-dir files");
+        Console.WriteLine("     - :e --> Exit");
         Console.WriteLine("\n" +
             "GitHub: https://github.com/Dark-Revel431/cherry\n");
     }

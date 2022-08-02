@@ -1,6 +1,6 @@
 # cherry
 
-Version: 1.4
+Version: 1.0
 
 # Features:
   - Auto Complete (TAB)
