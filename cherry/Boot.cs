@@ -23,12 +23,22 @@ internal class Boot
             {
                 if (JsonD.StartDirectory != null && Directory.Exists(JsonD.StartDirectory)) Directory.SetCurrentDirectory(JsonD.StartDirectory);
 
+                if (JsonD.NoSave != null)
+                {
+                    switch (JsonD.NoSave)
+                    {
+                        case true:
+                            Data.NoSave = true;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
                 if (JsonD.Mode != null)
                 {
                     switch (JsonD.Mode)
                     {
-                        case "here":
-                            break;
                         case "hide":
                             Data.Mode = Modes.hide;
                             break;
