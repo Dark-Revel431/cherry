@@ -6,6 +6,8 @@ internal class Boot
     {
         Data.ShellDirectory = Directory.GetCurrentDirectory();
 
+        Console.Title = "cherry";
+
         if (Environment.OSVersion.ToString().Contains("Windows")) Data.Process = "cmd.exe";
         else Data.Process = "bash";
 

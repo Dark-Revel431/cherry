@@ -5,8 +5,8 @@ internal class Input
     public static void PrintInput()
     {
         Console.Write($"┌ ");
-        Console.ForegroundColor = ConsoleColor.Gray;
-        Console.WriteLine($"[.{Data.CdSlash}{Directory.GetCurrentDirectory().Split(Data.CdSlash)[^1]}] > m:{Data.Mode}, p:{Data.Process}");
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+        Console.WriteLine($"[.{Data.CdSlash}{Directory.GetCurrentDirectory().Split(Data.CdSlash)[^1]}] ~ m:{Data.Mode}, p:{Data.Process}");
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("│");
         Console.Write("└ > ");
