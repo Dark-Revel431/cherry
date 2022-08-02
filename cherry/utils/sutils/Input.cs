@@ -49,10 +49,29 @@ internal class Input
                 Console.Write(Environment.NewLine);
                 return ":p";
             }
-            else if (key.Key == ConsoleKey.C && key.Modifiers == ConsoleModifiers.Alt)
+            else if (key.Key == ConsoleKey.I && key.Modifiers == ConsoleModifiers.Alt)
             {
                 Console.Write(Environment.NewLine);
-                return "clear";
+                return ":i";
+            }
+            else if (key.Key == ConsoleKey.C && key.Modifiers == ConsoleModifiers.Alt)
+            {
+                return ":c";
+            }
+            else if (key.Key == ConsoleKey.N && key.Modifiers == ConsoleModifiers.Alt)
+            {
+                Console.Write(Environment.NewLine);
+                return ":n";
+            }
+            else if (key.Key == ConsoleKey.M && key.Modifiers == ConsoleModifiers.Alt)
+            {
+                Console.Write(Environment.NewLine);
+                return ":m";
+            }
+            else if (key.Key == ConsoleKey.R && key.Modifiers == ConsoleModifiers.Alt)
+            {
+                Console.Write(Environment.NewLine);
+                return ":pr";
             }
             else if (key.Key == ConsoleKey.Tab)
             {

@@ -4,17 +4,18 @@ internal class DirectoryCommands
 {
     public static void Ls()
     {
-        Console.Write('\n');
+        Console.Write(Environment.NewLine);
 
         foreach (string dir in Directory.GetDirectories(Directory.GetCurrentDirectory()))
         {
-            Console.Write("DIR: ");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(dir.Split(Data.CdSlash)[^1]);
         }
 
+        Console.ForegroundColor = ConsoleColor.White;
+
         foreach (string file in Directory.GetFiles(Directory.GetCurrentDirectory()))
         {
-            Console.Write("FILE: ");
             Console.WriteLine(file.Split(Data.CdSlash)[^1]);
         }
     }

@@ -14,7 +14,7 @@ internal class Shell
             if (!Data.NoSave) History.AddHistory(command);
 
             CheckCommand.Check(command);
-            if (command != "clear")
+            if (command != "clear" || command != ":c")
             {
                 Console.Write(Environment.NewLine);
             }

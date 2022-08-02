@@ -18,7 +18,7 @@ internal class CheckCommand
             {
                 DirectoryCommands.Ls();
             }
-            else if (command.Split()[0] == "clear")
+            else if (command.Split()[0] == "clear" || command.Split()[0] == ":c")
             {
                 Console.Clear();
             }
@@ -26,18 +26,31 @@ internal class CheckCommand
             {
                 GeneralCommands.Exit();
             }
+            else if (command.Split()[0] == "info" || command.Split()[0] == ":i")
+            {
+                Utils.PrintInfo();
+            }
             else if (command.Split()[0] == "nosave" || command.Split()[0] == ":n")
             {
-                switch (command.Split()[1])
+                try
                 {
-                    case "true":
-                        Data.NoSave = true;
-                        break;
-                    case "false":
-                        Data.NoSave = false;
-                        break;
-                    default:
-                        break;
+                    switch (command.Split()[1])
+                    {
+                        case "true":
+                            Data.NoSave = true;
+                            break;
+                        case "false":
+                            Data.NoSave = false;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                catch
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(Data.NoSave);
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
             }
             else if (command.Split()[0] == "mode" || command.Split()[0] == ":m")
@@ -59,7 +72,12 @@ internal class CheckCommand
                             break;
                     }
                 }
-                catch { }
+                catch
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(Data.Mode);
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
             }
             else if (command.Split()[0] == "process" || command.Split()[0] == ":pr")
             {
@@ -80,7 +98,12 @@ internal class CheckCommand
                             break;
                     }
                 }
-                catch { }
+                catch
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(Data.Process);
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
             }
             else if (command.Split()[0] == "start" || command.Split()[0] == ":s")
             {

@@ -13,6 +13,7 @@ internal class Data
 
     internal static List<Process> process = new();
 
+    internal static double Version { get; } = 1.0;
     internal static string ShellDirectory { get; set; } = "C:\\";
     internal static string Process { get; set; } = string.Empty;
     internal static char CdSlash { get; set; } = '/';
