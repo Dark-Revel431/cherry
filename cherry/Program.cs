@@ -2,7 +2,7 @@
 
 class Program
 {
-    static void Main(String[] args)
+    static void Main()
     {
         Boot.Start();
     }
